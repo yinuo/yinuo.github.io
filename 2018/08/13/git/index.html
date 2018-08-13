@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>gitbook 的搭建 | yinuo</title>
+  <title>git 常用功能 | yinuo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装Git sudo apt-get install git 安装node npm 安装nvm cd ~ mkdir .nvm cd .nvm git clone https://github.com/creationix/nvm 等待下载完毕后将source /.nvm/nvm/nvm.sh添加到/.profile之类的文件中 vim ~/.profile 并在文件末尾添加source ~/.n">
+  <meta name="description" content="git 常用功能 当修改了一段代码后，使用git status 查看当前改动  如果需要把所有改动提交上去，使用 git add . 提交到缓冲区（此时文件并没有提交到远程仓库）  填写提交说明，使用 git commit -m “此处填写修改的内容”  使用 git push origin master 提交改动到远程仓库  使用 git pull origin master 获取远程仓库mas">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gitbook 的搭建">
-<meta property="og:url" content="http://yoursite.com/2018/08/13/gitbook/index.html">
+<meta property="og:title" content="git 常用功能">
+<meta property="og:url" content="http://yoursite.com/2018/08/13/git/index.html">
 <meta property="og:site_name" content="yinuo">
-<meta property="og:description" content="安装Git sudo apt-get install git 安装node npm 安装nvm cd ~ mkdir .nvm cd .nvm git clone https://github.com/creationix/nvm 等待下载完毕后将source /.nvm/nvm/nvm.sh添加到/.profile之类的文件中 vim ~/.profile 并在文件末尾添加source ~/.n">
+<meta property="og:description" content="git 常用功能 当修改了一段代码后，使用git status 查看当前改动  如果需要把所有改动提交上去，使用 git add . 提交到缓冲区（此时文件并没有提交到远程仓库）  填写提交说明，使用 git commit -m “此处填写修改的内容”  使用 git push origin master 提交改动到远程仓库  使用 git pull origin master 获取远程仓库mas">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-13T07:30:51.648Z">
+<meta property="og:updated_time" content="2018-08-13T11:46:09.464Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gitbook 的搭建">
-<meta name="twitter:description" content="安装Git sudo apt-get install git 安装node npm 安装nvm cd ~ mkdir .nvm cd .nvm git clone https://github.com/creationix/nvm 等待下载完毕后将source /.nvm/nvm/nvm.sh添加到/.profile之类的文件中 vim ~/.profile 并在文件末尾添加source ~/.n">
+<meta name="twitter:title" content="git 常用功能">
+<meta name="twitter:description" content="git 常用功能 当修改了一段代码后，使用git status 查看当前改动  如果需要把所有改动提交上去，使用 git add . 提交到缓冲区（此时文件并没有提交到远程仓库）  填写提交说明，使用 git commit -m “此处填写修改的内容”  使用 git push origin master 提交改动到远程仓库  使用 git pull origin master 获取远程仓库mas">
   
     <link rel="alternative" href="/atom.xml" title="yinuo" type="application/atom+xml">
   
@@ -154,57 +154,38 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-gitbook" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-git" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      gitbook 的搭建
+      git 常用功能
     </h1>
   
 
         
-        <a href="/2018/08/13/gitbook/" class="archive-article-date">
-  	<time datetime="2018-08-13T07:29:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-13</time>
+        <a href="/2018/08/13/git/" class="archive-article-date">
+  	<time datetime="2018-08-13T11:44:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>安装Git</p>
-<p>sudo apt-get install git</p>
-<p>安装node npm</p>
-<p>安装nvm</p>
-<p>cd ~</p>
-<p>mkdir .nvm</p>
-<p>cd .nvm</p>
-<p>git clone <a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">https://github.com/creationix/nvm</a></p>
-<p>等待下载完毕后将source /.nvm/nvm/nvm.sh添加到/.profile之类的文件中</p>
-<p>vim ~/.profile 并在文件末尾添加source ~/.nvm/nvm/nvm.sh</p>
-<p>source 一下.profile</p>
-<p>nvm –version检查安装是否正确</p>
-<p>安装node</p>
-<p>nvm install node</p>
-<p>node –version</p>
-<p>安装npm</p>
-<p>git clone –recursive git://github.com/isaacs/npm.git</p>
-<p>cd npm</p>
-<p>可以用version检查安装是否正确</p>
-<p>这里需要做一下链接，执行</p>
-<p>sudo ln -s /home/bitmain/.nvm/npm /usr/local/bin/npm</p>
-<p>source 一下 .profile 最好重启一下电脑</p>
-<p>安装gitbook</p>
-<p>npm install gitbook-cli -g</p>
-<p>可以用version检查安装是否正确</p>
-<p>gitbook 初始化</p>
-<p>首先，创建如下目录结构：</p>
-<p>$ tree book/</p>
-<p>README.md 和 SUMMARY.md 是两个必须文件，README.md 是对书籍的简单介绍：</p>
-<p>SUMMARY.md 是书籍的目录结构。</p>
-<p>创建了这两个文件后，使用 gitbook init，它会为我们创建 SUMMARY.md 中的目录结构。</p>
+        <h1 id="git-常用功能"><a href="#git-常用功能" class="headerlink" title="git 常用功能"></a>git 常用功能</h1><ol>
+<li><p>当修改了一段代码后，使用git status 查看当前改动</p>
+</li>
+<li><p>如果需要把所有改动提交上去，使用 git add . 提交到缓冲区（此时文件并没有提交到远程仓库）</p>
+</li>
+<li><p>填写提交说明，使用 git commit -m “此处填写修改的内容”</p>
+</li>
+<li><p>使用 git push origin master 提交改动到远程仓库</p>
+</li>
+<li><p>使用 git pull origin master 获取远程仓库master分支的最新改动。</p>
+</li>
+</ol>
 
       
 
@@ -289,7 +270,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/13/gitbook/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/13/git/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -303,18 +284,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/08/13/git/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          git 常用功能
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/13/hello/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hello for test</div>
+    <a href="/2018/08/13/gitbook/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">gitbook 的搭建</div>
       <i class="icon-circle-right"></i>
     </a>
   
