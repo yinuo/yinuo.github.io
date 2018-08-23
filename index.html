@@ -146,6 +146,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ext4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/23/ext4/">ubuntu系统制作ext4格式Ｕ盘</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/23/ext4/" class="archive-article-date">
+  	<time datetime="2018-08-23T07:06:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>sudo fdisk -l<br>找到Ｕ盘设备目录，一般为/dev/sdb1</p>
+</li>
+<li><p>sudo umount /dev/sdb1</p>
+</li>
+<li><p>sudo mkfs.ext4 /dev/sdb1</p>
+</li>
+<li><p>重新插拔一下Ｕ盘</p>
+</li>
+<li><p>选择盘符，右键格式化，格式话的时候，重命名为upan</p>
+</li>
+<li><p>鼠标打开upan目录，右键打开terminal, 跳转到当前目录的上一级目录： cd ..</p>
+</li>
+<li><p>chmod -R 777 upan</p>
+</li>
+</ol>
+<p>此时，制作完成，可以向Ｕ盘内拷贝文件了。</p>
+<p>备注：ex4格式的优势：向优盘内粘贴文件的时候，可以保留源文件的权限信息。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/23/ext4/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-file" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

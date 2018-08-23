@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>使用md5sum 判断文件是否拷贝成功 | yinuo</title>
+  <title>ubuntu系统制作ext4格式Ｕ盘 | yinuo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="需求：远程拷贝文件之后，在文件拷贝的目录判断文件是否拷贝成功。 scp lwang@192.168.1.159:~/bm1682_server/data/*.tgz /mnt/data sync echo “QA_PASS” 思路：使用md5sum命令获取正确文件的md5码，获取拷贝之后的文件的md5码和正确的文件对比。 rootfs_md5=md5sum rootfs.tgz | cut -d">
+  <meta name="description" content="sudo fdisk -l找到Ｕ盘设备目录，一般为/dev/sdb1  sudo umount /dev/sdb1  sudo mkfs.ext4 /dev/sdb1  重新插拔一下Ｕ盘  选择盘符，右键格式化，格式话的时候，重命名为upan  鼠标打开upan目录，右键打开terminal, 跳转到当前目录的上一级目录： cd ..  chmod -R 777 upan   此时，制作完成，可">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用md5sum 判断文件是否拷贝成功">
-<meta property="og:url" content="http://yoursite.com/2018/08/13/file/index.html">
+<meta property="og:title" content="ubuntu系统制作ext4格式Ｕ盘">
+<meta property="og:url" content="http://yoursite.com/2018/08/23/ext4/index.html">
 <meta property="og:site_name" content="yinuo">
-<meta property="og:description" content="需求：远程拷贝文件之后，在文件拷贝的目录判断文件是否拷贝成功。 scp lwang@192.168.1.159:~/bm1682_server/data/*.tgz /mnt/data sync echo “QA_PASS” 思路：使用md5sum命令获取正确文件的md5码，获取拷贝之后的文件的md5码和正确的文件对比。 rootfs_md5=md5sum rootfs.tgz | cut -d">
+<meta property="og:description" content="sudo fdisk -l找到Ｕ盘设备目录，一般为/dev/sdb1  sudo umount /dev/sdb1  sudo mkfs.ext4 /dev/sdb1  重新插拔一下Ｕ盘  选择盘符，右键格式化，格式话的时候，重命名为upan  鼠标打开upan目录，右键打开terminal, 跳转到当前目录的上一级目录： cd ..  chmod -R 777 upan   此时，制作完成，可">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-13T12:42:58.900Z">
+<meta property="og:updated_time" content="2018-08-23T07:13:30.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用md5sum 判断文件是否拷贝成功">
-<meta name="twitter:description" content="需求：远程拷贝文件之后，在文件拷贝的目录判断文件是否拷贝成功。 scp lwang@192.168.1.159:~/bm1682_server/data/*.tgz /mnt/data sync echo “QA_PASS” 思路：使用md5sum命令获取正确文件的md5码，获取拷贝之后的文件的md5码和正确的文件对比。 rootfs_md5=md5sum rootfs.tgz | cut -d">
+<meta name="twitter:title" content="ubuntu系统制作ext4格式Ｕ盘">
+<meta name="twitter:description" content="sudo fdisk -l找到Ｕ盘设备目录，一般为/dev/sdb1  sudo umount /dev/sdb1  sudo mkfs.ext4 /dev/sdb1  重新插拔一下Ｕ盘  选择盘符，右键格式化，格式话的时候，重命名为upan  鼠标打开upan目录，右键打开terminal, 跳转到当前目录的上一级目录： cd ..  chmod -R 777 upan   此时，制作完成，可">
   
     <link rel="alternative" href="/atom.xml" title="yinuo" type="application/atom+xml">
   
@@ -148,43 +148,44 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-file" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ext4" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      使用md5sum 判断文件是否拷贝成功
+      ubuntu系统制作ext4格式Ｕ盘
     </h1>
   
 
         
-        <a href="/2018/08/13/file/" class="archive-article-date">
-  	<time datetime="2018-08-13T12:42:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-13</time>
+        <a href="/2018/08/23/ext4/" class="archive-article-date">
+  	<time datetime="2018-08-23T07:06:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>需求：远程拷贝文件之后，在文件拷贝的目录判断文件是否拷贝成功。</p>
-<p>scp <a href="mailto:lwang@192.168.1.159" target="_blank" rel="noopener">lwang@192.168.1.159</a>:~/bm1682_server/data/*.tgz /mnt/data</p>
-<p>sync</p>
-<p>echo “QA_PASS”</p>
-<p>思路：使用md5sum命令获取正确文件的md5码，获取拷贝之后的文件的md5码和正确的文件对比。</p>
-<p>rootfs_md5=md5sum rootfs.tgz | cut -d “ “ -f 1</p>
-<p>system_md5=md5sum system.tgz | cut -d “ “ -f 1</p>
-<p>test_md5=md5sum test.tgz | cut -d “ “ -f 1</p>
-<p>judge_rootfs=”af64f53e2c05de4cebb64dc34a262897”</p>
-<p>judge_system=”93bd37b760425f21cf704c9f01efedfc”</p>
-<p>judge_test=”1bdafcdfd424c370f4a70a81cb4d5252”</p>
-<p>if [ ${rootfs_md5} = ${judge_rootfs} ]&amp;&amp;[ ${system_md5} = ${judge_system} ]&amp;&amp;[ ${test_md5} = ${judge_test} ]</p>
-<p>then</p>
-<p>echo “QA_PASS”</p>
-<p>echo “QA_PASS”</p>
-<p>echo “QA_PASS”</p>
-<p>fi</p>
+        <ol>
+<li><p>sudo fdisk -l<br>找到Ｕ盘设备目录，一般为/dev/sdb1</p>
+</li>
+<li><p>sudo umount /dev/sdb1</p>
+</li>
+<li><p>sudo mkfs.ext4 /dev/sdb1</p>
+</li>
+<li><p>重新插拔一下Ｕ盘</p>
+</li>
+<li><p>选择盘符，右键格式化，格式话的时候，重命名为upan</p>
+</li>
+<li><p>鼠标打开upan目录，右键打开terminal, 跳转到当前目录的上一级目录： cd ..</p>
+</li>
+<li><p>chmod -R 777 upan</p>
+</li>
+</ol>
+<p>此时，制作完成，可以向Ｕ盘内拷贝文件了。</p>
+<p>备注：ex4格式的优势：向优盘内粘贴文件的时候，可以保留源文件的权限信息。</p>
 
       
 
@@ -269,7 +270,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/13/file/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/23/ext4/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -283,18 +284,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/08/23/ext4/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ubuntu系统制作ext4格式Ｕ盘
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/13/git/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">git 常用功能</div>
+    <a href="/2018/08/13/file/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用md5sum 判断文件是否拷贝成功</div>
       <i class="icon-circle-right"></i>
     </a>
   
