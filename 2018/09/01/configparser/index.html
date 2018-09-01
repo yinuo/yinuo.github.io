@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>configparser | yinuo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="配置文件test.config  ‘’’    [db]    db_port = 3306    db_host = 127.0.01    db_pass = xgmtest [concurrent] processor = 20 ‘’’  Don’t talk, show your code!  ‘’’ #!/usr/bin/env python -- coding:UTF-8 --配置文">
+  <meta name="description" content="1.配置文件test.config [db] db_port = 3306 db_host = 127.0.01 db_pass = xgmtest [concurrent] processor = 20 2.Don’t talk, show your code! #!/usr/bin/env python #-*- coding:UTF-8 -*-  import configparser  c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="configparser">
 <meta property="og:url" content="http://yoursite.com/2018/09/01/configparser/index.html">
 <meta property="og:site_name" content="yinuo">
-<meta property="og:description" content="配置文件test.config  ‘’’    [db]    db_port = 3306    db_host = 127.0.01    db_pass = xgmtest [concurrent] processor = 20 ‘’’  Don’t talk, show your code!  ‘’’ #!/usr/bin/env python -- coding:UTF-8 --配置文">
+<meta property="og:description" content="1.配置文件test.config [db] db_port = 3306 db_host = 127.0.01 db_pass = xgmtest [concurrent] processor = 20 2.Don’t talk, show your code! #!/usr/bin/env python #-*- coding:UTF-8 -*-  import configparser  c">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-01T03:24:50.636Z">
+<meta property="og:updated_time" content="2018-09-01T03:40:30.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="configparser">
-<meta name="twitter:description" content="配置文件test.config  ‘’’    [db]    db_port = 3306    db_host = 127.0.01    db_pass = xgmtest [concurrent] processor = 20 ‘’’  Don’t talk, show your code!  ‘’’ #!/usr/bin/env python -- coding:UTF-8 --配置文">
+<meta name="twitter:description" content="1.配置文件test.config [db] db_port = 3306 db_host = 127.0.01 db_pass = xgmtest [concurrent] processor = 20 2.Don’t talk, show your code! #!/usr/bin/env python #-*- coding:UTF-8 -*-  import configparser  c">
   
     <link rel="alternative" href="/atom.xml" title="yinuo" type="application/atom+xml">
   
@@ -168,32 +168,60 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li>配置文件test.config</li>
-</ol>
-<p>‘’’<br>    [db]<br>    db_port = 3306<br>    db_host = 127.0.01<br>    db_pass = xgmtest</p>
-<pre><code>[concurrent]
+        <p>1.配置文件test.config</p>
+<pre><code>[db]
+db_port = 3306
+db_host = 127.0.01
+db_pass = xgmtest
+[concurrent]
 processor = 20
-</code></pre><p>‘’’</p>
-<ol start="2">
-<li>Don’t talk, show your code!</li>
-</ol>
-<p>‘’’</p>
-<p>#!/usr/bin/env python</p>
-<h1 id="coding-UTF-8"><a href="#coding-UTF-8" class="headerlink" title="-- coding:UTF-8 --"></a>-<em>- coding:UTF-8 -</em>-</h1><h1 id="配置文件的增删改查"><a href="#配置文件的增删改查" class="headerlink" title="配置文件的增删改查"></a>配置文件的增删改查</h1><p>import configparser</p>
-<p>conf = configparser.ConfigParser()<br>conf.read(“test.config”, encoding=”utf-8”)</p>
-<h1 id="获取所有的节点"><a href="#获取所有的节点" class="headerlink" title="获取所有的节点"></a>获取所有的节点</h1><p>v1 = conf.sections()<br>print(v1)</p>
-<h1 id="获取指定节点下的所有键"><a href="#获取指定节点下的所有键" class="headerlink" title="获取指定节点下的所有键"></a>获取指定节点下的所有键</h1><p>#v2 = conf.options(“db”)<br>v2 = conf.options(v1[0])<br>print(v2)</p>
-<h1 id="获取指定节点下所有的键值对"><a href="#获取指定节点下所有的键值对" class="headerlink" title="获取指定节点下所有的键值对"></a>获取指定节点下所有的键值对</h1><p>v3 = conf.items(v1[0])<br>print(v3)</p>
-<h1 id="获取指定节点、指定键对应的值"><a href="#获取指定节点、指定键对应的值" class="headerlink" title="获取指定节点、指定键对应的值"></a>获取指定节点、指定键对应的值</h1><p>v4 = conf.get(v1[0], v2[2])<br>print(v4)</p>
-<h1 id="检查节点是否存在"><a href="#检查节点是否存在" class="headerlink" title="检查节点是否存在"></a>检查节点是否存在</h1><p>has_node = conf.has_section(“Setting”)<br>print(has_node)</p>
-<h1 id="检查指定节点下的键值对是否存在"><a href="#检查指定节点下的键值对是否存在" class="headerlink" title="检查指定节点下的键值对是否存在"></a>检查指定节点下的键值对是否存在</h1><p>has_attr = conf.has_option(“db”, “db_pass”)<br>print(has_attr)</p>
-<h1 id="删除键值对"><a href="#删除键值对" class="headerlink" title="删除键值对"></a>删除键值对</h1><p>conf.remove_option(“db”, “db_user”)<br>conf.write(open(“test.config”, “w”))</p>
-<h1 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h1><p>conf.remove_section(“concurrent”)<br>conf.write(open(“test.config”, “w”))</p>
-<h1 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h1><p>conf.add_section(“concurrent”)<br>conf.write(open(“test.config”, “w”))</p>
-<h1 id="添加键值对"><a href="#添加键值对" class="headerlink" title="添加键值对"></a>添加键值对</h1><p>conf.set(“concurrent”, “processor”, “20”)<br>conf.write(open(“test.config”, “w”))</p>
-<p>‘’’</p>
+</code></pre><p>2.Don’t talk, show your code!</p>
+<pre><code>#!/usr/bin/env python
+#-*- coding:UTF-8 -*-
 
+import configparser
+
+conf = configparser.ConfigParser()
+conf.read(&quot;test.config&quot;, encoding=&quot;utf-8&quot;)
+
+v1 = conf.sections()
+print(v1)
+
+v2 = conf.options(v1[0])
+print(v2)
+
+# 获取指定节点下所有的键值对
+v3 = conf.items(v1[0])
+print(v3)
+
+# 获取指定节点、指定键对应的值
+v4 = conf.get(v1[0], v2[2])
+print(v4)
+
+# 检查节点是否存在
+has_node = conf.has_section(&quot;Setting&quot;)
+print(has_node)
+
+# 检查指定节点下的键值对是否存在
+has_attr = conf.has_option(&quot;db&quot;, &quot;db_pass&quot;)
+print(has_attr)
+
+# 删除键值对
+conf.remove_option(&quot;db&quot;, &quot;db_user&quot;)
+conf.write(open(&quot;test.config&quot;, &quot;w&quot;))
+
+# 删除节点
+conf.remove_section(&quot;concurrent&quot;)
+conf.write(open(&quot;test.config&quot;, &quot;w&quot;))
+
+# 添加节点
+conf.add_section(&quot;concurrent&quot;)
+conf.write(open(&quot;test.config&quot;, &quot;w&quot;))
+
+# 添加键值对
+conf.set(&quot;concurrent&quot;, &quot;processor&quot;, &quot;20&quot;)
+conf.write(open(&quot;test.config&quot;, &quot;w&quot;))
+</code></pre>
       
 
       
